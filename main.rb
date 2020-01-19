@@ -33,6 +33,11 @@ class AddressSearch
   end
 
   def search(search_word)
+    unless indexed?
+      puts "インデックスを作成します。"
+      create_index
+    end
+
     # 1文字のときはどうする?
     bi_gram = search_word.each_char.each_cons(2).map(&:join)
     indexes =
@@ -111,6 +116,10 @@ class AddressSearch
     File.open(INDEX_FILENAME, 'w') do |io|
       Marshal.dump(indexes, io)
     end
+  end
+
+  def indexed?
+    File.exist?(INDEX_FILENAME)
   end
 end
 
