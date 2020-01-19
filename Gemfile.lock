@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.0.1)
+    rubyzip (2.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  rubyzip
+
+BUNDLED WITH
+   2.1.4
