@@ -1,15 +1,3 @@
-
-# main.rb create-index
-# "渋谷": [3, 5, 7]
-#
-# インデックス作成
-# あっても更新、ただし変わってなければ更新しない
-# main.rb read file.csv
-#
-# (中間処理入るも)
-#
-# 検索
-# main.rb search search-word
 require 'zip'
 require 'byebug'
 require 'open-uri'
