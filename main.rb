@@ -117,7 +117,7 @@ class AddressSearch
         merge_buffer << row
 
         # 次の行が現在の行と町域以外同じときはマージ対象とする
-        if i < rows.length - 1 &&row[0...8] === rows[i+1][0...8] && row[9...15] === rows[i+1][9...15]
+        if (i < rows.length - 1) && (row[0...8] === rows[i+1][0...8]) && (row[9...15] === rows[i+1][9...15])
             next
         else
           merged = merge_buffer.first[0...8] + [merge_buffer.inject("") {|memo, item| memo + item[8]}] + merge_buffer.first[9...15]
@@ -156,10 +156,10 @@ end
 def help
   help = <<~HELP
     インデックス作成
-    main.rb prepare
+    ruby main.rb prepare
 
     検索
-    main.rb search SEARCH_WORD
+    ruby main.rb search SEARCH_WORD
   HELP
   puts help
 end
