@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     byebug (11.0.1)
-    rubyzip (2.0.0)
+    rubyzip (3.4.0)
 
 PLATFORMS
   ruby
